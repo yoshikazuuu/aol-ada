@@ -82,7 +82,17 @@ const CoinChangeVisualizer: React.FC = () => {
 
   return (
     <div className="mx-auto md:w-2/3 max-w-[68rem]">
-      <h1 className="text-4xl font-bold mb-4">Coin Change Visualizer</h1>
+      <div className="flex flex-col md:flex-row justify-around items-center">
+        <h1 className="text-4xl font-bold">Coin Change Visualizer</h1>
+        <p className="font-light text-muted-foreground text-sm my-3 text-center md:text-right">
+          Kelompok 1 - LD75 <br />
+          Melchior Celtic - 2602183086
+          <br /> Samuel Benediktus Meliala - 2602158355
+          <br /> Stanislaus Kanaya Jerry Febriano - 2602187664
+          <br /> Muhammad Edlyn Haryandi - 2602183193
+          <br /> Fayyadh Arya Zulfan - 2602187286
+        </p>
+      </div>
       <div className="space-y-2">
         <div>
           <Label className="text-sm mb-2">Enter Amount:</Label>
@@ -116,7 +126,7 @@ const CoinChangeVisualizer: React.FC = () => {
             <h2 className="text-xl text-center font-bold mb-2">
               Change: {change.count} coins needed to make ${amount}.
             </h2>
-            <ul className="grid grid-cols-3 gap-2">
+            <ul className="grid md:grid-cols-3 grid-cols-2 gap-2">
               {Object.entries(change.coins).map(([coinValue, count]) => (
                 <li
                   key={coinValue}
