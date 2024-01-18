@@ -109,8 +109,7 @@ const CoinChangeVisualizer: React.FC = () => {
           <h2 className="text-xl text-center font-bold mb-2">Calculating...</h2>
         ) : change.count === -1 ? (
           <h2 className="text-xl text-center font-bold mb-2">
-            There is no way to make change for undefined amount with the given
-            coins.
+            There is no way to make change for ${amount} with the given coins.
           </h2>
         ) : (
           <>
